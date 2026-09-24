@@ -1,0 +1,27 @@
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: clamp(2.5rem, 2rem + 3vw, 4rem) 1.5rem;
+  text-align: center;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+}
+
+.title {
+  font-size: var(--text-h3);
+  font-weight: 500;
+}
+
+.text {
+  max-width: 46ch;
+  color: var(--color-text-soft);
+}
+
+.action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}

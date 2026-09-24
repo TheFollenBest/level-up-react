@@ -1,0 +1,124 @@
+.footer {
+  margin-top: var(--space-section);
+  background-color: var(--color-bg-deep);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  padding-block: 3.5rem 2.5rem;
+
+  @media (width >= 576px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (width >= 992px) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  @media (width >= 1200px) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) minmax(0, 0.8fr) minmax(0, 1.6fr);
+  }
+}
+
+.about {
+  display: grid;
+  gap: 1.75rem;
+  align-content: start;
+
+  @media (width >= 576px) {
+    grid-column: 1 / -1;
+  }
+
+  @media (width >= 992px) {
+    grid-column: auto;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  & img {
+    width: 108px;
+  }
+}
+
+.legalName {
+  font-size: var(--text-small);
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.contacts {
+  display: grid;
+  gap: 1.25rem;
+
+  & dt {
+    margin-bottom: 0.25rem;
+    font-size: var(--text-tiny);
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  & dd {
+    font-size: var(--text-small);
+    font-weight: 700;
+  }
+}
+
+.hours {
+  display: grid;
+  gap: 0.125rem;
+}
+
+.nav {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.heading {
+  font-size: var(--text-small);
+  font-weight: 700;
+  color: var(--color-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.links {
+  display: grid;
+  gap: 0.625rem;
+  font-size: var(--text-small);
+  color: var(--color-text-soft);
+}
+
+.map {
+  min-height: 18rem;
+
+  @media (width >= 576px) {
+    grid-column: 1 / -1;
+  }
+
+  @media (width >= 1200px) {
+    grid-column: auto;
+    min-height: 27rem;
+  }
+}
+
+.bottom {
+  border-top: 1px solid var(--color-surface);
+}
+
+.bottomInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-block: 1.25rem;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}

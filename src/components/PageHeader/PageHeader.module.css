@@ -1,0 +1,35 @@
+.header {
+  position: relative;
+  padding-block: clamp(2.5rem, 1.6rem + 3.5vw, 5rem) clamp(2rem, 1.4rem + 2vw, 3.5rem);
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-surface);
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -3rem;
+    bottom: -5rem;
+    width: 18rem;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  max-width: 22ch;
+  font-size: var(--text-display);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.lead {
+  max-width: 62ch;
+  margin-top: 1.25rem;
+  font-size: var(--text-lead);
+  color: var(--color-text-soft);
+}

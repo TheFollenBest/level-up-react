@@ -1,0 +1,51 @@
+.page {
+  display: grid;
+  gap: 2rem;
+  padding-top: 2rem;
+
+  @media (width >= 992px) {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.toc {
+  padding: 1.25rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+
+  @media (width >= 992px) {
+    position: sticky;
+    top: var(--sticky-top);
+  }
+}
+
+.tocList {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  font-size: var(--text-small);
+  list-style: decimal;
+
+  & li::marker {
+    color: var(--color-accent);
+  }
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+  max-width: 70ch;
+}
+
+.section {
+  display: grid;
+  gap: 0.75rem;
+  color: var(--color-text-soft);
+  scroll-margin-top: 1.5rem;
+}
+
+.title {
+  font-size: var(--text-h3);
+}

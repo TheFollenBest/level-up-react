@@ -1,0 +1,72 @@
+.dialog {
+  width: min(100% - 1.5rem, 34rem);
+  max-height: calc(100dvh - 1.5rem);
+  margin: auto;
+  padding: 0;
+  color: var(--color-text);
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 64px rgb(0 0 0 / 0.6);
+  overscroll-behavior: contain;
+
+  &::backdrop {
+    background-color: var(--color-backdrop);
+  }
+
+  &[open] {
+    animation: dialog-in var(--duration-fast) ease-out;
+  }
+}
+
+.panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+
+  @media (width >= 576px) {
+    padding: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  font-size: var(--text-h3);
+  font-weight: 700;
+}
+
+.close {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: -0.5rem -0.5rem 0 0;
+  padding: 0;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  background: none;
+  border: 0;
+  border-radius: 50%;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.text {
+  color: var(--color-text-soft);
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}

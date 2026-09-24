@@ -1,0 +1,40 @@
+.button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  font-size: 1.5rem;
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.45);
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 1rem;
+  transition:
+    opacity var(--duration-fast),
+    translate var(--duration-fast),
+    visibility var(--duration-fast),
+    background-color var(--duration-fast);
+
+  &[data-visible='true'] {
+    opacity: 1;
+    visibility: visible;
+    translate: 0 0;
+  }
+
+  &:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  @media (width >= 768px) {
+    right: 2rem;
+    bottom: 2rem;
+  }
+}

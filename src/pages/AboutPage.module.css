@@ -1,0 +1,75 @@
+.section {
+  margin-top: var(--space-section);
+}
+
+.intro {
+  display: grid;
+  gap: 2rem;
+
+  @media (width >= 992px) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.text {
+  display: grid;
+  gap: 1rem;
+  max-width: 68ch;
+  font-size: var(--text-lead);
+  color: var(--color-text-soft);
+}
+
+.directions {
+  padding: 1.5rem;
+  background-color: var(--color-surface);
+  border-top: 4px solid var(--color-accent);
+  border-radius: var(--radius-small) var(--radius-small) var(--radius) var(--radius);
+}
+
+.directionsTitle {
+  margin-bottom: 1rem;
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.directionsList {
+  display: grid;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.guarantees {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+
+  @media (width >= 768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.guarantee {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+}
+
+.guaranteeIcon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+}
+
+.guaranteeTitle {
+  font-size: 1.25rem;
+}
+
+.guaranteeText {
+  font-size: var(--text-small);
+  color: var(--color-text-soft);
+}

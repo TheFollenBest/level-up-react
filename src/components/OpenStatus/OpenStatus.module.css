@@ -1,0 +1,20 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-soft);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-text-muted);
+  border-radius: 50%;
+
+  [data-open='true'] > & {
+    background-color: var(--color-success);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-success) 25%, transparent);
+  }
+}

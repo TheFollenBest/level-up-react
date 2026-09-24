@@ -1,0 +1,5 @@
+.title {
+  margin-bottom: clamp(1.25rem, 0.6rem + 2.4vw, 3.125rem);
+  font-size: var(--text-h2);
+  font-weight: 500;
+}

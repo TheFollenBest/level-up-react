@@ -1,0 +1,115 @@
+.page {
+  padding-top: 2rem;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.25rem, 0.6rem + 2.5vw, 2rem);
+  background-color: var(--color-surface);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-small) var(--radius) var(--radius) var(--radius-small);
+}
+
+.cancelled {
+  border-left-color: var(--color-divider);
+
+  & .number,
+  & .details dd {
+    color: var(--color-text-muted);
+  }
+}
+
+.cardHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.number {
+  font-size: var(--text-h3);
+}
+
+.date {
+  margin-top: 0.25rem;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  font-size: var(--text-small);
+  font-weight: 700;
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+  border-radius: 999px;
+
+  &[data-status='cancelled'] {
+    color: var(--color-text);
+    background-color: var(--color-surface-raised);
+  }
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem 2rem;
+
+  & dt {
+    font-size: var(--text-tiny);
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  & dd {
+    margin-top: 0.25rem;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+
+  & a {
+    color: var(--color-accent);
+  }
+}
+
+.message {
+  white-space: pre-line;
+}
+
+.estimate {
+  padding: 1rem 1.25rem;
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+}
+
+.estimateTotal {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.estimateList {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  font-size: var(--text-small);
+  color: var(--color-text-soft);
+
+  & li::before {
+    content: '·';
+    margin-right: 0.5rem;
+    color: var(--color-accent);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}

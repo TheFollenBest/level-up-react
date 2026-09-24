@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0.25rem 0;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+
+  & li:not(:last-child)::after {
+    content: '/';
+    margin-inline: 0.5rem;
+  }
+
+  & a {
+    color: var(--color-text-muted);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.current {
+  color: var(--color-text);
+}

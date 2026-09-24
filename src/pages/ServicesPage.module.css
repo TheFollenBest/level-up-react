@@ -1,0 +1,126 @@
+.page {
+  padding-top: 2rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter {
+  min-height: 42px;
+  padding: 0.5rem 1.125rem;
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  transition:
+    border-color var(--duration-fast),
+    color var(--duration-fast);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.filterActive {
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-on-accent);
+  }
+}
+
+.count {
+  margin-block: 1.25rem 1.5rem;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+
+  @media (width >= 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (width >= 992px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.extras {
+  margin-top: var(--space-section);
+}
+
+.extrasList {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+
+  @media (width >= 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.extra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 1.125rem 1.25rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+}
+
+.extraTitle {
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.extraText {
+  margin-top: 0.25rem;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.extraPrice {
+  font-weight: 700;
+  color: var(--color-heading);
+  white-space: nowrap;
+}
+
+.free {
+  color: var(--color-success);
+}
+
+.help {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  margin-top: var(--space-section);
+  padding: clamp(1.25rem, 0.5rem + 3vw, 2.5rem);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 60%),
+    var(--color-surface);
+  border-radius: var(--radius);
+}
+
+.helpTitle {
+  font-size: var(--text-h3);
+}
+
+.helpText {
+  max-width: 56ch;
+  margin-top: 0.5rem;
+  color: var(--color-text-soft);
+}

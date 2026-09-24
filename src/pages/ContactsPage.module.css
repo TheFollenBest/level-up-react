@@ -1,0 +1,130 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+
+  @media (width >= 992px) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+
+  @media (width >= 576px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.card {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  padding: 1.5rem 1.25rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+}
+
+.icon {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+.cardLabel {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.cardValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  overflow-wrap: anywhere;
+}
+
+.cardLink {
+  justify-self: start;
+  font-size: var(--text-small);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cardNote {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.hoursCard {
+  @media (width >= 576px) {
+    grid-row: span 2;
+  }
+}
+
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-small);
+
+  & th,
+  & td {
+    padding: 0.4375rem 0;
+    border-bottom: 1px solid var(--color-divider);
+  }
+
+  & th {
+    font-weight: 400;
+    text-align: left;
+  }
+
+  & td {
+    font-weight: 500;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.today {
+  & th,
+  & td {
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+}
+
+.formCard {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.25rem, 0.6rem + 2.5vw, 2rem);
+  background-color: var(--color-surface);
+  border-top: 4px solid var(--color-accent);
+  border-radius: var(--radius-small) var(--radius-small) var(--radius) var(--radius);
+
+  @media (width >= 992px) {
+    position: sticky;
+    top: var(--sticky-top);
+  }
+}
+
+.formTitle {
+  font-size: var(--text-h3);
+}
+
+.formText {
+  color: var(--color-text-soft);
+}
+
+.mapSection {
+  margin-top: var(--space-section);
+}
+
+.map {
+  min-height: clamp(20rem, 40vw, 30rem);
+}

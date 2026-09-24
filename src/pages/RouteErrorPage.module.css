@@ -1,0 +1,50 @@
+.page {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  gap: 1rem;
+  width: min(100% - 1.5rem, 40rem);
+  min-height: 100dvh;
+  margin-inline: auto;
+}
+
+.code {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--text-display);
+}
+
+.text {
+  color: var(--color-text-soft);
+
+  & a {
+    color: var(--color-accent);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  min-height: 50px;
+  padding: 0.5rem 1.75rem;
+  font-weight: 700;
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+  border: 0;
+  border-radius: var(--radius);
+}
+
+.link {
+  color: var(--color-accent);
+  text-decoration: underline;
+}

@@ -1,0 +1,135 @@
+.page {
+  padding-top: 2rem;
+}
+
+.toolbar {
+  display: grid;
+  gap: 1rem;
+}
+
+.search {
+  position: relative;
+  max-width: 36rem;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  color: var(--color-field-placeholder);
+  translate: 0 -50%;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  font-weight: 500;
+  color: var(--color-field-text);
+  background-color: var(--color-field-bg);
+  border: 2px solid transparent;
+  border-radius: var(--radius-small);
+
+  &::placeholder {
+    color: var(--color-field-placeholder);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-accent);
+    outline: none;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter {
+  min-height: 42px;
+  padding: 0.5rem 1.125rem;
+  font-size: var(--text-small);
+  font-weight: 500;
+  background-color: var(--color-surface);
+  border: 0;
+  border-radius: 999px;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.filterActive {
+  color: var(--color-on-accent);
+  background-color: var(--color-accent);
+
+  &:hover {
+    color: var(--color-on-accent);
+  }
+}
+
+.count {
+  margin-block: 1.5rem;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.groups {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.group {
+  display: grid;
+  gap: 1rem;
+
+  @media (width >= 992px) {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.groupTitle {
+  font-size: var(--text-h3);
+}
+
+.ask {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: var(--space-section);
+  padding: clamp(1.25rem, 0.5rem + 3vw, 2rem);
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+
+  & > button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  @media (width >= 768px) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+
+    & > button {
+      grid-column: auto;
+    }
+  }
+}
+
+.askIcon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+}
+
+.askTitle {
+  font-size: var(--text-h3);
+}
+
+.askText {
+  margin-top: 0.25rem;
+  color: var(--color-text-soft);
+}
