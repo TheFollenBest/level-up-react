@@ -24,7 +24,9 @@ export function SocialLinks({ withHandles = false, className }: SocialLinksProps
               rel="noreferrer"
               aria-label={withHandles ? undefined : `${social.label}: ${social.handle}`}
             >
-              <SocialIcon className={styles.icon} />
+              <span className={styles.badge}>
+                <SocialIcon className={styles.icon} />
+              </span>
               {withHandles ? <span>{social.handle}</span> : null}
             </a>
           </li>
